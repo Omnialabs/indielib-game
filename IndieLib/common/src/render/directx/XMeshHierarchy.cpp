@@ -118,7 +118,8 @@ HRESULT XMeshHierarchy::CreateMeshContainer(
 	newMeshContainer->MeshData.pMesh->AddRef();
 
 	// Create material and texture arrays. Note that I always want to have at least one
-	newMeshContainer->NumMaterials = max(numMaterials, 1);
+	DWORD one = 1;
+	newMeshContainer->NumMaterials = max(numMaterials, one);
 	newMeshContainer->_exMaterials = new D3DMATERIAL9[newMeshContainer->NumMaterials];
 	newMeshContainer->_exTextures  = new LPDIRECT3DTEXTURE9[newMeshContainer->NumMaterials];
 

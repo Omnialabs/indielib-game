@@ -1,0 +1,11 @@
+FILE(GLOB SOURCE_FILES
+tif_*
+)
+
+list(REMOVE_ITEM SOURCE_FILES ${CMAKE_CURRENT_LIST_DIR}/tif_wince.c)
+
+if(NOT UNIX)
+list(REMOVE_ITEM SOURCE_FILES ${CMAKE_CURRENT_LIST_DIR}/tif_vms.c)
+endif()
+
+add_library(tiff4 STATIC ${SOURCE_FILES})

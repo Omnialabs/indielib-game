@@ -110,9 +110,9 @@ FI_STRUCT (FIMULTIBITMAP) { void *data; };
 
 // Types used in the library (directly copied from Windows) -----------------
 
-#if defined(__MINGW32__) && defined(_WINDOWS_H)
-#define _WINDOWS_	// prevent a bug in MinGW32
-#endif // __MINGW32__
+//#if defined(__MINGW32__) && defined(_WINDOWS_H)
+//#define _WINDOWS_	// prevent a bug in MinGW32
+//#endif // __MINGW32__
 
 #ifndef _WINDOWS_
 #define _WINDOWS_
@@ -134,6 +134,10 @@ FI_STRUCT (FIMULTIBITMAP) { void *data; };
 #endif
 
 #ifndef _MSC_VER
+#if defined(__MINGW32__)
+#include <windef.h>
+#include <wingdi.h>
+#else
 // define portable types for 32-bit / 64-bit OS
 #include <inttypes.h>
 typedef int32_t BOOL;
@@ -143,6 +147,7 @@ typedef uint32_t DWORD;
 typedef int32_t LONG;
 typedef int64_t FIINT64;
 typedef uint64_t FIUINT64;
+#endif
 #else
 // MS is not C99 ISO compliant
 typedef long BOOL;
@@ -160,6 +165,7 @@ typedef unsigned __int64 FIUINT64;
 #pragma pack(1)
 #endif // WIN32
 
+#ifndef __MINGW32__
 typedef struct tagRGBQUAD {
 #if FREEIMAGE_COLORORDER == FREEIMAGE_COLORORDER_BGR
   BYTE rgbBlue;
@@ -210,6 +216,7 @@ typedef struct tagBITMAPINFO {
   RGBQUAD          bmiColors[1];
 } BITMAPINFO, *PBITMAPINFO;
 
+#endif
 #endif // _WINDOWS_
 
 // Types used in the library (specific to FreeImage) ------------------------
