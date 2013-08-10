@@ -137,6 +137,8 @@ FI_STRUCT (FIMULTIBITMAP) { void *data; };
 #if defined(__MINGW32__)
 #include <windef.h>
 #include <wingdi.h>
+typedef int64_t FIINT64;
+typedef uint64_t FIUINT64;
 #else
 // define portable types for 32-bit / 64-bit OS
 #include <inttypes.h>
