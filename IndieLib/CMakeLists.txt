@@ -10,6 +10,16 @@ ${CMAKE_CURRENT_LIST_DIR}/common/src/IND_SpriterManager.cpp
 ${CMAKE_CURRENT_LIST_DIR}/common/src/IND_TmxMapManager.cpp
 )
 
+#These include D3D headers so I'm assuming this is Windows only
+if(NOT WIN32)
+list(REMOVE_ITEM SOURCE_FILES
+${CMAKE_CURRENT_LIST_DIR}/common/src/IND_3dMesh.cpp
+${CMAKE_CURRENT_LIST_DIR}/common/src/IND_3dMeshManager.cpp
+${CMAKE_CURRENT_LIST_DIR}/common/src/IND_Entity3d.cpp
+${CMAKE_CURRENT_LIST_DIR}/common/src/IND_Entity3dManager.cpp
+)
+endif()
+
 add_subdirectory(common/dependencies)
 
 set(INCLUDE_DIRECTORIES
@@ -24,12 +34,24 @@ find_library(D3DX9_LIB d3dx9 $ENV{DXSDK_DIR}/Lib/x86)
 find_library(WINSOCK2_LIB Ws2_32)
 set(OS_LIBRARIES ${D3DX9_LIB} opengl32 ${WINSOCK2_LIB})
 
-FILE (GLOB SOURCE_FILES_WIN
+FILE (GLOB SOURCE_FILES_GLOB
 common/src/render/directx/*
 common/src/render/opengl/*
 common/src/platform/win32/*.cpp
 )
-list(APPEND SOURCE_FILES ${SOURCE_FILES_WIN})
+list(APPEND SOURCE_FILES ${SOURCE_FILES_GLOB})
+
+else()
+
+FILE (GLOB SOURCE_FILES_GLOB
+common/src/render/opengl/*
+)
+list(APPEND SOURCE_FILES ${SOURCE_FILES_GLOB})
+
+if(APPLE)
+FIND_LIBRARY(OPENGL_LIBRARY OpenGL)
+set(OS_LIBRARIES ${OPENGL_LIBRARY})
+endif()
 
 endif()
 
@@ -46,13 +68,13 @@ FreeImageLib
 ${OS_LIBRARIES}
 )
 
-if(CMAKE_COMPILER_IS_GNUCC)
+if(MSVC)
 set (OS_COMPILER_FLAGS
-"-DINDIELIB_DLLBUILD -DGLEW_STATIC -DFREEIMAGE_LIB"
+"/D INDIELIB_DLLBUILD /D GLEW_STATIC /D FREEIMAGE_LIB"
 )
 else()
 set (OS_COMPILER_FLAGS
-"/D INDIELIB_DLLBUILD /D GLEW_STATIC /D FREEIMAGE_LIB"
+"-DINDIELIB_DLLBUILD -DGLEW_STATIC -DFREEIMAGE_LIB"
 )
 endif()
 

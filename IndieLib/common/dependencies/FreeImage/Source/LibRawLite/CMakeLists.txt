@@ -6,7 +6,6 @@ src/*
 )
 
 include_directories(.)
-
 if(WIN32)
 if(CMAKE_COMPILER_IS_GNUCC)
 set (OS_COMPILER_FLAGS
@@ -20,5 +19,8 @@ endif()
 endif()
 
 add_library(raw STATIC ${SOURCE_FILES})
+
+if(WIN32)
 set_target_properties(raw PROPERTIES
  COMPILE_FLAGS ${OS_COMPILER_FLAGS})
+endif()

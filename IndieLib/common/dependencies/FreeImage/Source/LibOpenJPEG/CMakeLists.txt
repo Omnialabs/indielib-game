@@ -8,13 +8,13 @@ list(REMOVE_ITEM SOURCE_FILES ${CMAKE_CURRENT_LIST_DIR}/t1_generate_luts.c)
 
 add_library(openjpeg STATIC ${SOURCE_FILES})
 
-if(CMAKE_COMPILER_IS_GNUCC)
+if(MSVC)
 set (OS_COMPILER_FLAGS
-"-DOPJ_STATIC"
+"/D OPJ_STATIC"
 )
 else()
 set (OS_COMPILER_FLAGS
-"/D OPJ_STATIC"
+"-DOPJ_STATIC"
 )
 endif()
 
