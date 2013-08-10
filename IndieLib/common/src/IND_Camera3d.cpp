@@ -4,7 +4,7 @@
  *****************************************************************************************/
 
 /*
-IndieLib 2d library Copyright (C) 2005 Javier López López (javierlopezpro@gmail.com)
+IndieLib 2d library Copyright (C) 2005 Javier Lï¿½pez Lï¿½pez (javierlopezpro@gmail.com)
 
 This library is free software; you can redistribute it and/or modify it under the
 terms of the GNU Lesser General Public License as published by the Free Software
@@ -22,7 +22,7 @@ Suite 330, Boston, MA 02111-1307 USA
 // ----- Includes -----
 
 #include "Global.h"
-#include "IND_Camera3D.h"
+#include "IND_Camera3d.h"
 
 
 // --------------------------------------------------------------------------------

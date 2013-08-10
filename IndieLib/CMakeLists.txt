@@ -32,7 +32,7 @@ if(WIN32)
 list(APPEND INCLUDE_DIRECTORIES $ENV{DXSDK_DIR}Include)
 find_library(D3DX9_LIB d3dx9 $ENV{DXSDK_DIR}/Lib/x86)
 find_library(WINSOCK2_LIB Ws2_32)
-set(OS_LIBRARIES ${D3DX9_LIB} opengl32 ${WINSOCK2_LIB})
+set(OS_LIBRARIES ${D3DX9_LIB} ${WINSOCK2_LIB} opengl32 SDLmain)
 
 FILE (GLOB SOURCE_FILES_GLOB
 common/src/render/directx/*
@@ -51,6 +51,8 @@ list(APPEND SOURCE_FILES ${SOURCE_FILES_GLOB})
 if(APPLE)
 FIND_LIBRARY(OPENGL_LIBRARY OpenGL)
 set(OS_LIBRARIES ${OPENGL_LIBRARY})
+else() #LINUX
+set(OS_LIBRARIES GL)
 endif()
 
 endif()
@@ -62,7 +64,6 @@ add_library(IndieLib SHARED ${SOURCE_FILES})
 target_link_libraries(IndieLib
 glew
 SDL
-SDLmain
 tinyxml
 FreeImageLib
 ${OS_LIBRARIES}

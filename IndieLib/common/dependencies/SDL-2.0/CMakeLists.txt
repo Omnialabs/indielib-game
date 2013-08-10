@@ -68,9 +68,31 @@ set(LIBRARIES winmm imm32 version)
 
 endif(WIN32)
 
+######## LINUX ########
+
+if(UNIX AND NOT APPLE)
+
+FILE (GLOB SOURCE_FILES_LINUX
+src/haptic/linux/*
+src/render/opengl/*
+src/timer/unix/*
+src/thread/pthread/*
+src/joystick/linux/*
+src/power/linux/*
+src/audio/pulseaudio/*
+src/loadso/dlopen/*
+src/audio/dsp/*
+src/video/x11/*
+)
+list(APPEND SOURCE_FILES ${SOURCE_FILES_LINUX})
+
+endif()
+
 include_directories(${INCLUDE_DIRECTORIES})
 
 add_library(SDL SHARED ${SOURCE_FILES})
 target_link_libraries(SDL ${LIBRARIES})
 
+if(WIN32)
 add_library(SDLmain STATIC ${SOURCE_FILES_MAIN})
+endif()
