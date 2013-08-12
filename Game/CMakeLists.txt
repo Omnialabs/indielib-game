@@ -1,4 +1,4 @@
-FILE(GLOB_RECURSE SOURCE_FILES *.cpp)
+FILE(GLOB SOURCE_FILES *.cpp *.h)
 
 include_directories(../IndieLib/common/include)
 

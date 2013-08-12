@@ -20,7 +20,7 @@
 					<folderInfo id="cdt.managedbuild.toolchain.gnu.base.862354439.604500329." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.475977678" name="cdt.managedbuild.toolchain.gnu.base" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.MachO64;org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.base.1382178693" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder buildPath="${workspace_loc:/indielib-game}/build/linux/Debug" cleanBuildTarget="-f first.mk clean" id="cdt.managedbuild.target.gnu.builder.base.1049887770" incrementalBuildTarget="-f first.mk all VERBOSE=1" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="cdt.managedbuild.target.gnu.builder.base"/>
+							<builder buildPath="${workspace_loc:/indielib-game/Game/bin/linux/Debug}" cleanBuildTarget="-f first.mk clean" id="cdt.managedbuild.target.gnu.builder.base.1049887770" incrementalBuildTarget="-f first.mk all VERBOSE=1" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="cdt.managedbuild.target.gnu.builder.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.base.148790245" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.1054305574" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2064807168" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -63,7 +63,7 @@
 					<folderInfo id="cdt.managedbuild.toolchain.gnu.base.862354439.604500329.1092880591." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.base.1763814464" name="cdt.managedbuild.toolchain.gnu.base" superClass="cdt.managedbuild.toolchain.gnu.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF;org.eclipse.cdt.core.MachO64;org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.base.577674486" name="Debug Platform" osList="linux,hpux,aix,qnx" superClass="cdt.managedbuild.target.gnu.platform.base"/>
-							<builder buildPath="${workspace_loc:/indielib-game}/build/linux/Release" cleanBuildTarget="-f first.mk clean" id="cdt.managedbuild.target.gnu.builder.base.689787669" incrementalBuildTarget="-f first.mk all VERBOSE=1" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="cdt.managedbuild.target.gnu.builder.base"/>
+							<builder buildPath="${workspace_loc:/indielib-game/Game/bin/linux/Release}" cleanBuildTarget="-f first.mk clean" id="cdt.managedbuild.target.gnu.builder.base.689787669" incrementalBuildTarget="-f first.mk all VERBOSE=1" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="false" superClass="cdt.managedbuild.target.gnu.builder.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.archiver.base.1505244924" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.base.1650521256" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.base">
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.697723740" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -104,7 +104,7 @@
 					<folderInfo id="cdt.managedbuild.toolchain.gnu.base.862354439.604500329.573933876." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.1370333287" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.base.2037995102" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.mingw.base"/>
-							<builder buildPath="${workspace_loc:/indielib-game}/Debug Windows" id="cdt.managedbuild.builder.gnu.cross.939293936" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/indielib-game/Game/bin/windows/Debug}" cleanBuildTarget="-f first.mk clean" id="cdt.managedbuild.builder.gnu.cross.939293936" incrementalBuildTarget="-f first.mk all VERBOSE=1" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.1578197191" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.324849003" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -145,7 +145,7 @@
 					<folderInfo id="cdt.managedbuild.toolchain.gnu.base.862354439.604500329.573933876.408680597." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.1904257151" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.base.1586515721" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.mingw.base"/>
-							<builder buildPath="${workspace_loc:/indielib-game}/Release Windows" id="cdt.managedbuild.builder.gnu.cross.1083854840" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/indielib-game/Game/bin/windows/Release}" cleanBuildTarget="-f first.mk clean" id="cdt.managedbuild.builder.gnu.cross.1083854840" incrementalBuildTarget="-f first.mk all VERBOSE=1" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.442793904" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.891929534" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -179,16 +179,16 @@
 			<resource resourceType="PROJECT" workspacePath="/indielib-game"/>
 		</configuration>
 		<configuration configurationName="Release Windows">
-			<resource resourceType="FOLDER" workspacePath="/indielib-game/build/windows/Release"/>
+			<resource resourceType="FOLDER" workspacePath="/indielib-game/Game/bin/windows/Release"/>
 		</configuration>
 		<configuration configurationName="Debug Linux">
-			<resource resourceType="FOLDER" workspacePath="/indielib-game/build/linux/Debug"/>
+			<resource resourceType="FOLDER" workspacePath="/indielib-game/Game/bin/linux/Debug"/>
 		</configuration>
 		<configuration configurationName="Release Linux">
-			<resource resourceType="FOLDER" workspacePath="/indielib-game/build/linux/Release"/>
+			<resource resourceType="FOLDER" workspacePath="/indielib-game/Game/bin/linux/Release"/>
 		</configuration>
 		<configuration configurationName="Debug Windows">
-			<resource resourceType="FOLDER" workspacePath="/indielib-game/build/windows/Debug"/>
+			<resource resourceType="FOLDER" workspacePath="/indielib-game/Game/bin/windows/Debug"/>
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
