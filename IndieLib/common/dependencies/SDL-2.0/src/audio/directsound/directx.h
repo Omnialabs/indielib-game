@@ -73,7 +73,10 @@
 #define DIRECTSOUND_VERSION 0x0800
 #define DIRECTINPUT_VERSION 0x0500
 
+// ddraw.h seems to be gone in DirectX SDK June 2010
+#if (defined(_DXSDK_BUILD_MAJOR) && (_DXSDK_BUILD_MAJOR < 1962))
 #include <ddraw.h>
+#endif
 #include <dsound.h>
 #include <dinput.h>
 

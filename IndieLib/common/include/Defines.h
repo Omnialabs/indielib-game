@@ -271,7 +271,8 @@ typedef unsigned char BYTE;    // HACK: Fixes some code regarding surfaces, BYTE
 //---------------------------------------------------------------------------------
 //									Standard C/C++
 //---------------------------------------------------------------------------------
-#include <iostream>   //To use printf and other logging utilities
+#include <iostream>   //To use some logging utilities
+#include <cstdio>     //To use printf and other logging utilities
 
 
 // --------------------------------------------------------------------------------

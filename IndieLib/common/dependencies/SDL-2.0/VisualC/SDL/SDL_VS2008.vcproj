@@ -100,6 +100,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="copy Debug\SDL2.dll ..\..\..\..\..\bin\win"
 			/>
 		</Configuration>
 		<Configuration
@@ -268,6 +269,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="copy Release\SDL2.dll ..\..\..\..\..\bin\win"
 			/>
 		</Configuration>
 		<Configuration

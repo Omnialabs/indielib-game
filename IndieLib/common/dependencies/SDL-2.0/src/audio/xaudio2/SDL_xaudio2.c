@@ -97,8 +97,15 @@ XAUDIO2_DetectDevices(int iscapture, SDL_AddAudioDevice addfn)
     IXAudio2_Release(ixa2);
 }
 
+#ifdef __GNUC__
+/* MinGW doesn't include a parameter name in this macro, is this a bug in their headers? */
+#define THIS____ THIS This
+#else
+#define THIS____ THIS
+#endif
+
 static void STDMETHODCALLTYPE
-VoiceCBOnBufferEnd(THIS_ void *data)
+VoiceCBOnBufferEnd(THIS____, void *data)
 {
     /* Just signal the SDL audio thread and get out of XAudio2's way. */
     SDL_AudioDevice *this = (SDL_AudioDevice *) data;
@@ -106,18 +113,18 @@ VoiceCBOnBufferEnd(THIS_ void *data)
 }
 
 static void STDMETHODCALLTYPE
-VoiceCBOnVoiceError(THIS_ void *data, HRESULT Error)
+VoiceCBOnVoiceError(THIS____, void *data, HRESULT Error)
 {
     /* !!! FIXME: attempt to recover, or mark device disconnected. */
     SDL_assert(0 && "write me!");
 }
 
 /* no-op callbacks... */
-static void STDMETHODCALLTYPE VoiceCBOnStreamEnd(THIS) {}
-static void STDMETHODCALLTYPE VoiceCBOnVoiceProcessPassStart(THIS_ UINT32 b) {}
-static void STDMETHODCALLTYPE VoiceCBOnVoiceProcessPassEnd(THIS) {}
-static void STDMETHODCALLTYPE VoiceCBOnBufferStart(THIS_ void *data) {}
-static void STDMETHODCALLTYPE VoiceCBOnLoopEnd(THIS_ void *data) {}
+static void STDMETHODCALLTYPE VoiceCBOnStreamEnd(THIS____) {}
+static void STDMETHODCALLTYPE VoiceCBOnVoiceProcessPassStart(THIS____, UINT32 b) {}
+static void STDMETHODCALLTYPE VoiceCBOnVoiceProcessPassEnd(THIS____) {}
+static void STDMETHODCALLTYPE VoiceCBOnBufferStart(THIS____, void *data) {}
+static void STDMETHODCALLTYPE VoiceCBOnLoopEnd(THIS____, void *data) {}
 
 
 static Uint8 *
