@@ -63,7 +63,7 @@ include_directories(${INCLUDE_DIRECTORIES})
 add_library(IndieLib SHARED ${SOURCE_FILES})
 target_link_libraries(IndieLib
 glew
-SDL
+SDL2
 tinyxml
 FreeImageLib
 ${OS_LIBRARIES}
