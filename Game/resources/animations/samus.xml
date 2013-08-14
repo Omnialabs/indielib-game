@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<!-- frames declaration -->
+	<frames>	
+		<frame name="Samus1" file="../../../resources/animations/samus_1.png" offset_x="2" offset_y="2" />
+		<frame name="Samus2" file="../../../resources/animations/samus_2.png" offset_x="2" offset_y="2" />
+		<frame name="Samus3" file="../../../resources/animations/samus_3.png" />
+		<frame name="Samus4" file="../../../resources/animations/samus_4.png" />
+		<frame name="Samus5" file="../../../resources/animations/samus_5.png" />
+		<frame name="Samus6" file="../../../resources/animations/samus_6.png" />
+		<frame name="Samus7" file="../../../resources/animations/samus_7.png" />
+		<frame name="Samus8" file="../../../resources/animations/samus_8.png" />
+	</frames>
+		
+	<!-- sequences declaration -->
+	<sequences>
+		<sequence name="samus">
+			<frame name="Samus1" time="150" />
+			<frame name="Samus2" time="150" />
+			<frame name="Samus3" time="150" />
+			<frame name="Samus4" time="150" />
+			<frame name="Samus5" time="150" />
+			<frame name="Samus6" time="150" />
+			<frame name="Samus7" time="150" />
+			<frame name="Samus8" time="150" />
+		</sequence>			
+	</sequences>
+</animation>
