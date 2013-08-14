@@ -32,7 +32,7 @@ if(WIN32)
 list(APPEND INCLUDE_DIRECTORIES $ENV{DXSDK_DIR}Include)
 find_library(D3DX9_LIB d3dx9 $ENV{DXSDK_DIR}/Lib/x86)
 find_library(WINSOCK2_LIB Ws2_32)
-set(OS_LIBRARIES ${D3DX9_LIB} ${WINSOCK2_LIB} opengl32 SDLmain)
+set(OS_LIBRARIES ${D3DX9_LIB} ${WINSOCK2_LIB} opengl32 SDL2main)
 
 FILE (GLOB SOURCE_FILES_GLOB
 common/src/render/directx/*
