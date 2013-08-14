@@ -39,6 +39,7 @@ config.log
 
 ### Mac specific
 xcschememanagement.plist
+*.DS_Store
 
 ### SDL specific
 *.d
