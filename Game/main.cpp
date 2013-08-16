@@ -32,26 +32,26 @@ int IndieLib()
 	if (!mI->_surfaceManager->add(mSurfaceBack, "../../../resources/background.jpg", IND_OPAQUE, IND_32)) return 0;
 
 	//Loading a sprite
-	/*IND_Surface *mSurfaceSamus = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mSurfaceSamus, "../../../resources/SamusStill.png", IND_ALPHA, IND_32, 0, 255, 0)) return 0;*/
+	IND_Surface *mSurfaceSamus = IND_Surface::newSurface();
+	if (!mI->_surfaceManager->add(mSurfaceSamus, "../../../resources/SamusStill.png", IND_ALPHA, IND_32, 0, 255, 0)) return 0;
 
-	/*IND_Animation *mAnimationSamus = IND_Animation::newAnimation();
-	if (!mI->_animationManager->addToSurface(mAnimationSamus, "../../../resources/animations/samus.xml", IND_ALPHA, IND_32, 0, 255, 0)) return 0;*/
+	IND_Animation *mAnimationSamus = IND_Animation::newAnimation();
+	if (!mI->_animationManager->addToSurface(mAnimationSamus, "../../../resources/animations/samus.xml", IND_ALPHA, IND_32, 0, 255, 0)) return 0;
 
 
 	IND_Entity2d *mBack = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(mBack);
 	mBack->setSurface(mSurfaceBack);
 
-	/*IND_Entity2d *mStillSamus = IND_Entity2d::newEntity2d();
+	IND_Entity2d *mStillSamus = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(mStillSamus);
 	mStillSamus->setSurface(mSurfaceSamus);
-	mStillSamus->setPosition(500,100,0);*/
+	mStillSamus->setPosition(500,100,0);
 
-	/*IND_Entity2d *mMovingSamus = IND_Entity2d::newEntity2d();
+	IND_Entity2d *mMovingSamus = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(mMovingSamus);
 	mMovingSamus->setAnimation(mAnimationSamus);
-	mMovingSamus->setSequence(0);*/
+	mMovingSamus->setSequence(0);
 
 	// ----- Main Loop -----
 
@@ -73,10 +73,8 @@ int IndieLib()
 
 		mDelta = mI->_render->getFrameTime() / 1000.0f;
 
-		//mDelta = mI->_render->getFrameTime() / 1000.0f;
-
 		// Move entities when pressing right
-		/*if (mI->_input->isKeyPressed(IND_KEYRIGHT)){
+		if (mI->_input->isKeyPressed(IND_KEYRIGHT)){
 			mhPos += mSpeed * mDelta;
 			if (mMovingSamus->getMirrorX())
 			{
@@ -91,7 +89,7 @@ int IndieLib()
 			{
 				mMovingSamus->setMirrorX(1);
 			}
-		}*/
+		}
 
 		//Make the player "jump"
 		if (mI->_input->isKeyPressed(IND_SPACE)){
@@ -109,12 +107,18 @@ int IndieLib()
 		// ----- Updating entities attribute ----
 
 		//Samus
-		//mMovingSamus->setPosition((float) mhPos, mvPos, 0);
+		mMovingSamus->setPosition((float) mhPos, mvPos, 0);
+
+		// ----- Check collisions -----
+		if (mI->_entity2dManager->isCollision(mStillSamus,"still",mMovingSamus,"moving")){
+			mMovingSamus->setPosition((float) mhPos-10, mvPos-10, 0);
+		}
 
 		// -------- Render -------
 
 		mI->_render->beginScene();
 		mI->_entity2dManager->renderEntities2d();
+		mI->_entity2dManager->renderCollisionAreas(255, 0, 0, 255);
 		mI->_render->endScene();
 		////mI->_render->showFpsInWindowTitle();
 	}

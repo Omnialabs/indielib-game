@@ -178,6 +178,14 @@
 				RelativePath=".\main.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\WorkingPath.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\WorkingPath.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
