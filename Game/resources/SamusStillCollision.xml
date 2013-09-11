@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bounding_areas>
+	<circle id="SamusStillHead" x="11" y="10" radius="10" />
+	<rectangle id="SamusStilllleg" x="1" y="33" width="8" height="13" />
+	<rectangle id="SamusStillrleg" x="13" y="33" width="8" height="13" />
+</bounding_areas>

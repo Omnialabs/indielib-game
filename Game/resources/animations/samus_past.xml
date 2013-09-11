@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation>
+	<!-- frames declaration -->
+	<frames>	
+		<frame name="Samus1" file="../../../Game/resources/animations/samus_past/samus_1.png" collision="../../../Game/resources/animations/samus_past/samus_1_collisions.xml" offset_x="2" offset_y="2" />
+		<frame name="Samus2" file="../../../Game/resources/animations/samus_past/samus_2.png" collision="../../../Game/resources/animations/samus_past/samus_2_collisions.xml" offset_x="2" offset_y="2" />
+		<frame name="Samus3" file="../../../Game/resources/animations/samus_past/samus_3.png" collision="../../../Game/resources/animations/samus_past/samus_3_collisions.xml" />
+		<frame name="Samus4" file="../../../Game/resources/animations/samus_past/samus_4.png" collision="../../../Game/resources/animations/samus_past/samus_4_collisions.xml" />
+		<frame name="Samus5" file="../../../Game/resources/animations/samus_past/samus_5.png" collision="../../../Game/resources/animations/samus_past/samus_5_collisions.xml" />
+		<frame name="Samus6" file="../../../Game/resources/animations/samus_past/samus_6.png" collision="../../../Game/resources/animations/samus_past/samus_6_collisions.xml" />
+		<frame name="Samus7" file="../../../Game/resources/animations/samus_past/samus_7.png" collision="../../../Game/resources/animations/samus_past/samus_7_collisions.xml" />
+		<frame name="Samus8" file="../../../Game/resources/animations/samus_past/samus_8.png" collision="../../../Game/resources/animations/samus_past/samus_8_collisions.xml" />
+	</frames>
+		
+	<!-- sequences declaration -->
+	<sequences>
+		<sequence name="samus">
+			<frame name="Samus1" time="150" />
+			<frame name="Samus2" time="150" />
+			<frame name="Samus3" time="150" />
+			<frame name="Samus4" time="150" />
+			<frame name="Samus5" time="150" />
+			<frame name="Samus6" time="150" />
+			<frame name="Samus7" time="150" />
+			<frame name="Samus8" time="150" />
+		</sequence>			
+	</sequences>
+</animation>

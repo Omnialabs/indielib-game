@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bounding_areas>
+	<circle id="head" x="26" y="8" radius="7" />
+</bounding_areas>
