@@ -95,6 +95,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="cmd /c copy $(TargetPath) $(ProjectDir)..\..\Game\bin\windows\Release"
 			/>
 		</Configuration>
 		<Configuration
@@ -180,6 +181,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="cmd /c copy $(TargetPath) $(ProjectDir)..\..\Game\bin\windows\Debug"
 			/>
 		</Configuration>
 	</Configurations>
