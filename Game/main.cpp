@@ -35,19 +35,19 @@ int IndieLib()
 
 	//Loading the background
 	IND_Surface *mSurfaceBack = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mSurfaceBack, "../../../Game/resources/background.jpg", IND_OPAQUE, IND_32)) return 0;
+	if (!mI->_surfaceManager->add(mSurfaceBack, "../../../resources/background.jpg", IND_OPAQUE, IND_32)) return 0;
 
 	//Loading a sprite
 	IND_Surface *mSurfaceSamus = IND_Surface::newSurface();
-	if (!mI->_surfaceManager->add(mSurfaceSamus, "../../../Game/resources/SamusStill.png", IND_ALPHA, IND_32, 0, 255, 0)) return 0;
+	if (!mI->_surfaceManager->add(mSurfaceSamus, "../../../resources/SamusStill.png", IND_ALPHA, IND_32, 0, 255, 0)) return 0;
 
 	//Loading an animation
 	IND_Animation *mAnimationSamus = IND_Animation::newAnimation();
-	if (!mI->_animationManager->addToSurface(mAnimationSamus, "../../../Game/resources/animations/samus.xml", IND_ALPHA, IND_32, 0, 255, 0)) return 0;
+	if (!mI->_animationManager->addToSurface(mAnimationSamus, "../../../resources/animations/samus.xml", IND_ALPHA, IND_32, 0, 255, 0)) return 0;
 
 	// Font
 	IND_Font *mFont = IND_Font::newFont();
-	if (!mI->_fontManager->add(mFont, "../../../Game/resources/fonts/font.png", "../../../Game/resources/fonts/font.xml", IND_ALPHA, IND_32)) return 0;
+	if (!mI->_fontManager->add(mFont, "../../../resources/fonts/font.png", "../../../resources/fonts/font.xml", IND_ALPHA, IND_32)) return 0;
 
 	IND_Entity2d *mText = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(1,mText);
@@ -62,7 +62,7 @@ int IndieLib()
 	mStillSamus->setHotSpot(0.5f,0.5f);
 	mStillSamus->setSurface(mSurfaceSamus);
 	mStillSamus->setPosition(500,100,0);
-	mStillSamus->setBoundingAreas("../../../Game/resources/SamusStillCollision.xml");
+	mStillSamus->setBoundingAreas("../../../resources/SamusStillCollision.xml");
 
 	IND_Entity2d *mMovingSamus = IND_Entity2d::newEntity2d();
 	mI->_entity2dManager->add(mMovingSamus);
