@@ -2,20 +2,17 @@
  * Desc: Utility methods for working paths setup
  *****************************************************************************************/
 
-#ifndef _Player_h
-#define _Player_h
+#ifndef _Spriter_h
+#define _Spriter_h
 
     
-class Player {
-	public:
-	    bool setName(char* sName);
-
+class Spriter {
 	private:
-		bool isMoving;
-		int posX;
-		int posY;
+//		std::vector<char> sprite_vector;
 
-		void move();
+	public:
+		void setSprite(const char sprite [15]);
+		//std::vector<char> getSprite();	
 };
 
 #endif

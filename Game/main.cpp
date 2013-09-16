@@ -10,6 +10,9 @@
 #include "IND_Timer.h"
 #include "IND_Camera2d.h"
 #include "WorkingPath.h"
+#include <vector>
+#include <string.h>
+#include "Spriter.h"
 
 /*
 ==================
@@ -20,6 +23,9 @@ int IndieLib()
 {
 	char sMsgString[128];
 	char sFpsValue[15];
+
+	Spriter s1;
+	s1.setSprite("U");
 
     //Sets the working path as the 'exe' directory. All resource paths are relative to this directory
 	if (!WorkingPathSetup::setWorkingPathFromExe(NULL)) {

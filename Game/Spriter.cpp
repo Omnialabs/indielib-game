@@ -2,20 +2,14 @@
  * Desc: Utility methods for working paths setup
  *****************************************************************************************/
 
-#ifndef _Player_h
-#define _Player_h
+//#include "Defines.h"
+#include "Spriter.h"
 
-    
-class Player {
-	public:
-	    bool setName(char* sName);
-
-	private:
-		bool isMoving;
-		int posX;
-		int posY;
-
-		void move();
-};
-
-#endif
+void Spriter::setSprite(const char sprite[15]){
+	int a;
+	a=5;
+	if (a == 15)
+	{
+		a = 2;
+	}
+}
