@@ -6,10 +6,5 @@
 #include "Spriter.h"
 
 void Spriter::setSprite(const char sprite[15]){
-	int a;
-	a=5;
-	if (a == 15)
-	{
-		a = 2;
-	}
+	char s[30];
 }

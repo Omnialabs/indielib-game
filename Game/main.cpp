@@ -25,7 +25,8 @@ int IndieLib()
 	char sFpsValue[15];
 
 	Spriter s1;
-	s1.setSprite("U");
+	s1.setSprite("samus");
+
 
     //Sets the working path as the 'exe' directory. All resource paths are relative to this directory
 	if (!WorkingPathSetup::setWorkingPathFromExe(NULL)) {
