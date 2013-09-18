@@ -14,6 +14,8 @@
 #include <string.h>
 #include "Spriter.h"
 
+using namespace std;
+
 /*
 ==================
 Main
@@ -30,7 +32,7 @@ int IndieLib()
 
     //Sets the working path as the 'exe' directory. All resource paths are relative to this directory
 	if (!WorkingPathSetup::setWorkingPathFromExe(NULL)) {
-		std::cout<<"\nUnable to Set the working path !";
+		cout<<"\nUnable to Set the working path !";
 	}
 
 	// ----- IndieLib intialization -----
