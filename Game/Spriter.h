@@ -15,7 +15,8 @@ class Spriter {
 //		std::vector<char> sprite_vector;
 
 	public:
-		void setSprite(const string sprite);
+		Spriter();
+		Spriter(const string sprite);
 		//std::vector<char> getSprite();	
 };
 

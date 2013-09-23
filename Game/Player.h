@@ -5,17 +5,26 @@
 #ifndef _Player_h
 #define _Player_h
 
+#include <string>
+#include "Spriter.h"
+
     
 class Player {
 	public:
-	    bool setName(char* sName);
+		Player();
+		Player(const string sprite);
+		void setName(const string sName);
+		void setSpriter(const string sprite);
+		//void move();
 
 	private:
-		bool isMoving;
+		Spriter spriter (const string sprite);
+		string name;
+		/*bool isMoving;
 		int posX;
-		int posY;
+		int posY;*/
 
-		void move();
+		
 };
 
 #endif

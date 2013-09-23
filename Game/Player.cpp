@@ -5,12 +5,27 @@
 //#include "Defines.h"
 #include "Player.h"
 
-bool Player::setName(char* sName) {
-
-	return false;
+Player::Player(){
+	setSpriter("samus");
 }
 
-void Player::move() {
+/*Player::Player(const string sprite){
+	setSpriter(sprite);
+}*/
+
+void Player::setSpriter(const string sprite){
+	spriter(sprite);
+}
+
+void Player::setName(const string sName){
+	name = sName;
+}
+
+/*Player::Player(const string sprite):
+   Spriter(sprite) {
+}*/
+
+//void Player::move() {
 	/*if (mI->_input->isKeyPressed(IND_KEYRIGHT)){
 		posX = 119;
 		mhPos += mSpeed * mDelta;
@@ -21,4 +36,4 @@ void Player::move() {
 		}
 		mPosXCamera0 += mSpeedLayer0 * mDelta;
 	}*/
-}
+//}

@@ -12,7 +12,8 @@
 #include "WorkingPath.h"
 #include <vector>
 #include <string.h>
-#include "Spriter.h"
+#include "Player.h"
+//#include "Spriter.h"
 
 using namespace std;
 
@@ -26,8 +27,8 @@ int IndieLib()
 	char sMsgString[128];
 	char sFpsValue[15];
 
-	Spriter s1;
-	s1.setSprite("samus");
+	//Spriter s1 ("samus");
+	Player p; // ("samus");
 
 
     //Sets the working path as the 'exe' directory. All resource paths are relative to this directory
