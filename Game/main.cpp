@@ -27,8 +27,8 @@ int IndieLib()
 	char sMsgString[128];
 	char sFpsValue[15];
 
-	//Spriter s1 ("samus");
-	Player p; // ("samus");
+	Spriter s1 ("samus");
+	//Player p ("samus");
 
 
     //Sets the working path as the 'exe' directory. All resource paths are relative to this directory

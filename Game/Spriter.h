@@ -11,8 +11,7 @@
 using namespace std;
     
 class Spriter {
-	private:
-//		std::vector<char> sprite_vector;
+	vector<string> path;
 
 	public:
 		Spriter();

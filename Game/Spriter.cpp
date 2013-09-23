@@ -9,8 +9,6 @@ Spriter::Spriter(){
 }
 
 Spriter::Spriter(const string sprite){
-	vector<string> path;
-
 	path.push_back(sprite + "_past");
 	path.push_back(sprite);
 	path.push_back(sprite + "_future");	

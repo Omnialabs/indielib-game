@@ -10,21 +10,18 @@
 
     
 class Player {
+	Spriter spriter;
+	string name;
+	/*bool isMoving;
+	int posX;
+	int posY;*/
+
 	public:
 		Player();
 		Player(const string sprite);
 		void setName(const string sName);
-		void setSpriter(const string sprite);
+		void setSpriter(const string sprite2);
 		//void move();
-
-	private:
-		Spriter spriter (const string sprite);
-		string name;
-		/*bool isMoving;
-		int posX;
-		int posY;*/
-
-		
 };
 
 #endif

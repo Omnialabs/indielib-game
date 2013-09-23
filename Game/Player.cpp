@@ -7,14 +7,15 @@
 
 Player::Player(){
 	setSpriter("samus");
+	setName("samus");
 }
 
 /*Player::Player(const string sprite){
 	setSpriter(sprite);
 }*/
 
-void Player::setSpriter(const string sprite){
-	spriter(sprite);
+void Player::setSpriter(const string sprite2){
+	spriter ("s");
 }
 
 void Player::setName(const string sName){
