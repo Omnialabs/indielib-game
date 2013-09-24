@@ -26,10 +26,10 @@ int IndieLib()
 {
 	char sMsgString[128];
 	char sFpsValue[15];
+	int currentEra = 0;
 
-	Spriter s1 ("samus");
-	Player p ("samus");
-
+	Player p1 ("samus");
+	p1.getCurrentSprite(currentEra);
 
     //Sets the working path as the 'exe' directory. All resource paths are relative to this directory
 	if (!WorkingPathSetup::setWorkingPathFromExe(NULL)) {

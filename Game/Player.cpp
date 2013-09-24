@@ -5,8 +5,8 @@
 //#include "Defines.h"
 #include "Player.h"
 
-Player::Player(string param):spriter(param):{
-	setName("samus");
+Player::Player(string sprite):spriter(sprite){
+	setName("P1");
 }
 
 /*
@@ -23,6 +23,10 @@ field2(val2) {
 
 void Player::setName(const string sName){
 	name = sName;
+}
+
+string Player::getCurrentSprite(int era){
+	return spriter.getPath()[era];	
 }
 
 //void Player::move() {

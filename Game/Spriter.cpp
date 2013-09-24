@@ -13,3 +13,7 @@ Spriter::Spriter(const string sprite){
 	path.push_back(sprite);
 	path.push_back(sprite + "_future");	
 }
+
+vector<string> Spriter::getPath(){
+	return path;
+}

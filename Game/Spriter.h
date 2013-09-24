@@ -16,6 +16,7 @@ class Spriter {
 	public:
 		Spriter();
 		Spriter(const string sprite);
+		vector<string> getPath();
 		//std::vector<char> getSprite();	
 };
 

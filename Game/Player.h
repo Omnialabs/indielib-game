@@ -20,7 +20,8 @@ class Player {
 		Player();
 		Player(const string sprite);
 		void setName(const string sName);
-		void setSpriter(const string sprite2);
+		void setSpriter(const string sprite);
+		string getCurrentSprite(int era);
 		//void move();
 };
 
