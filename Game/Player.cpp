@@ -5,26 +5,25 @@
 //#include "Defines.h"
 #include "Player.h"
 
-Player::Player(){
-	setSpriter("samus");
+Player::Player(string param):spriter(param):{
 	setName("samus");
 }
 
-/*Player::Player(const string sprite){
-	setSpriter(sprite);
-}*/
+/*
+Player:: Player(Type val1, Type val2): 
+field1(val1),
+field2(val2) {
 
-void Player::setSpriter(const string sprite2){
-	spriter ("s");
 }
+*/
+
+/*void Player:: setSpriter(const string param){
+   spriter = Spriter(param);
+}*/
 
 void Player::setName(const string sName){
 	name = sName;
 }
-
-/*Player::Player(const string sprite):
-   Spriter(sprite) {
-}*/
 
 //void Player::move() {
 	/*if (mI->_input->isKeyPressed(IND_KEYRIGHT)){
