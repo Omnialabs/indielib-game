@@ -26,10 +26,10 @@ int IndieLib()
 {
 	char sMsgString[128];
 	char sFpsValue[15];
-	int currentEra = 0;
+	int currentEra = 1;
 
 	Player p1 ("samus");
-	p1.getCurrentSprite(currentEra);
+	//p1.getCurrentSprite(currentEra);
 
     //Sets the working path as the 'exe' directory. All resource paths are relative to this directory
 	if (!WorkingPathSetup::setWorkingPathFromExe(NULL)) {
@@ -176,10 +176,12 @@ int IndieLib()
 				mJumpTimer->stop();
 			}
 		}
-		/*else
-		{
-			mvPos += 5;
-		}*/
+		
+		//Switch era
+		/*if (mI->_input->isKeyPressed(IND_S)){
+			currentEra = 0;
+			if (!mI->_animationManager->saddToSurface(mAnimationSamus, "../../../resources/animations/samus_past.xml", IND_ALPHA, IND_32, 0, 255, 0)) return 0;
+		}*/		
 
 		if (!bMovingSamus)
 			mMovingSamus->setSurface(mSurfaceSamus);
